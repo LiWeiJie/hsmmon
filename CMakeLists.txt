@@ -1,0 +1,8 @@
+cmake_minimum_required(VERSION 3.2)
+PROJECT(hsmmon)
+SET(SRC_LIST main.cpp lib/dbmanager.cpp lib/ping.cpp lib/m_socket.cpp)
+SET(CMAKE_CXX_COMPILER "clang++") 
+SET(CMAKE_CXX_FLAGS "-std=c++11 -stdlib=libc++ -Werror -Weverything -Wno-deprecated-declarations -Wno-disabled-macro-expansion -Wno-float-equal -Wno-c++98-compat -Wno-c++98-compat-pedantic -Wno-global-constructors -Wno-exit-time-destructors -Wno-missing-prototypes -Wno-unused-parameter -Wno-padded -Wno-old-style-cast")
+SET(CMAKE_EXE_LINKER_FLAGS "-lc++ -lc++abi -lmysqlcppconn -lmysqlclient") 
+SET(CMAKE_BUILD_TYPE Debug) 
+ADD_EXECUTABLE(hsmmon ${SRC_LIST} lib/daemon.cpp lib/device.cpp)
