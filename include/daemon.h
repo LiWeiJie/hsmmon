@@ -13,7 +13,7 @@
 
 #include <unistd.h>
 
-#include "hsmmon_log.h"
+#include "include/hsmmon_log.h"
 
 #define ERR_EXIT(m) \
 do\

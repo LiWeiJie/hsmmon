@@ -40,7 +40,7 @@ class socket_send
     private: 
         int sock;
         struct sockaddr_in server;
-        bool connected = false;
+    bool connected;
 }; 
 
 class socket_rece 

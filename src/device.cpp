@@ -8,7 +8,7 @@
 * @History:
 **************************************************************/
 
-#include "../include/db/device.h"
+#include "include/db/device.h"
 
 bool device_dao::create(device_t &ot) {
     char sql[500];

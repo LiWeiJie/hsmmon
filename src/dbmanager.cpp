@@ -7,7 +7,7 @@
 *
 * @History: 
 **************************************************************/
-#include "../include/db/dbmanager.h"
+#include "include/db/dbmanager.h"
 
 void mes(const char *mess) { std::cout << mess << std::endl;return;}
 

@@ -8,7 +8,7 @@
 * @History: 
 **************************************************************/
 
-#include "../include/nw/m_socket.h"
+#include "include/nw/m_socket.h"
 
 void socket_send::m_close()
 {
@@ -19,21 +19,19 @@ void socket_send::m_close()
 }
 
 
-    void socket_send::m_connect()
-    {
-        /* Establish connection */
-        if (connect(sock, (struct sockaddr *) &this->server, sizeof(this->server)) < 0) {
-            //Die("Failed to connect with server");
-        }
-        this->connected = true;
-        return ;
+void socket_send::m_connect() {
+    /* Establish connection */
+    if (connect(sock, (struct sockaddr *) &this->server, sizeof(this->server)) < 0) {
+        //Die("Failed to connect with server");
     }
+    this->connected = true;
+    return;
+}
 
 
-    bool socket_send::is_connected()
-    {
-        return this->connected;
-    }
+bool socket_send::is_connected() {
+    return this->connected;
+}
 
 
 long socket_send::m_receive(char *buffer, unsigned int _size)
@@ -65,6 +63,7 @@ socket_send::socket_send(std::string server_ip, std::string port)
     server.sin_family = AF_INET;                  /* Internet/IP */
     server.sin_addr.s_addr = inet_addr(server_ip.c_str());  /* IP address */
     server.sin_port = htons((uint16_t)atoi(port.c_str()));       /* server port */
+    this->connected = false;
 }
 
 socket_send::~socket_send()

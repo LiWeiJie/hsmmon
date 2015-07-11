@@ -13,7 +13,7 @@
 #include <time.h>
 #include <vector>
 
-#include "dbmanager.h"
+#include "include/db/dbmanager.h"
 
 struct device_t
 {

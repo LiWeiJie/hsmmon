@@ -8,14 +8,13 @@
 * @History:
 **************************************************************/
 
-#include "../include/daemon.h"
+#include "include/daemon.h"
 
 
 void let_it_fly()
 {
     if (daemon(1, 1) == -1)
         ERR_EXIT("daemon error");
-
 
 }
 

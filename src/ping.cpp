@@ -8,7 +8,7 @@
 * @History: 
 **************************************************************/
 
-#include "../include/db/ping.h"
+#include "include/db/ping.h"
 
 std::string ping_dao::to_string(const ping_t &pt)
 {
@@ -121,7 +121,7 @@ ping_t ping_dao::to_ping_t(m_sql_object sql_object) {
     if(iter->empty())
         pt.alarmFlag = false;
     else 
-        pt.alarmFlag = this->dbm->sql_sti(*iter);
+        pt.alarmFlag = this->dbm->sql_sti(*iter)>0?true:false;
     return pt;
 }
 

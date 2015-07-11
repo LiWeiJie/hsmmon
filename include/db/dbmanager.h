@@ -26,7 +26,7 @@
 
 #include <mysql/mysql.h>
 
-#include "../hsmmon_log.h"
+#include "include/hsmmon_log.h"
 
 
 typedef std::vector<std::string> m_sql_object;
