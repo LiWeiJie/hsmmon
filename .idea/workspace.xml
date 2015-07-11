@@ -11,20 +11,27 @@
     </ADDITIONAL_GENERATION_ENVIRONMENT>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="679a8f5b-6cba-418e-b869-9ac1617420c7" name="Default" comment="modify project_dir and include information">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resource.cpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/include/db/resource.h" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/daemon.cpp" afterPath="$PROJECT_DIR$/src/daemon.cpp" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/dbmanager.cpp" afterPath="$PROJECT_DIR$/src/dbmanager.cpp" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/device.cpp" afterPath="$PROJECT_DIR$/src/device.cpp" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/m_socket.cpp" afterPath="$PROJECT_DIR$/src/m_socket.cpp" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/ping.cpp" afterPath="$PROJECT_DIR$/src/ping.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeLists.txt" afterPath="$PROJECT_DIR$/CMakeLists.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/include/daemon.h" afterPath="$PROJECT_DIR$/include/daemon.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/include/db/dbmanager.h" afterPath="$PROJECT_DIR$/include/db/dbmanager.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/include/db/device.h" afterPath="$PROJECT_DIR$/include/db/device.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/include/nw/m_socket.h" afterPath="$PROJECT_DIR$/include/nw/m_socket.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/include/db/ping.h" afterPath="$PROJECT_DIR$/include/db/ping.h" />
+    <list default="true" id="679a8f5b-6cba-418e-b869-9ac1617420c7" name="Default" comment="add resource_table">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/make/sample1_unittest" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/make/Makefile" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/samples/prime_tables.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/samples/sample1.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/samples/sample1.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/samples/sample10_unittest.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/samples/sample1_unittest.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/samples/sample2.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/samples/sample2.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/samples/sample2_unittest.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/samples/sample3-inl.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/samples/sample3_unittest.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/samples/sample4.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/samples/sample4.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/samples/sample4_unittest.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/samples/sample5_unittest.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/samples/sample6_unittest.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/samples/sample7_unittest.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/samples/sample8_unittest.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/samples/sample9_unittest.cc" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="hsmmon.iws" />
@@ -80,11 +87,33 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="resource.cpp" pinned="false" current-in-tab="true">
+          <file leaf-file-name="resource.cpp" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/resource.cpp">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.5185185">
-                  <caret line="47" column="38" selection-start-line="47" selection-start-column="38" selection-end-line="47" selection-end-column="38" />
+                <state vertical-scroll-proportion="0.0">
+                  <caret line="54" column="20" selection-start-line="54" selection-start-column="20" selection-end-line="54" selection-end-column="20" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="daemon.h" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/include/daemon.h">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.0">
+                  <caret line="26" column="8" selection-start-line="26" selection-start-column="8" selection-end-line="26" selection-end-column="8" />
+                  <folding>
+                    <element signature="e#344#363#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="daemon.cpp" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/daemon.cpp">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.0">
+                  <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -100,12 +129,14 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="dbmanager.h" pinned="false" current-in-tab="false">
+          <file leaf-file-name="dbmanager.h" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/include/db/dbmanager.h">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0">
-                  <caret line="28" column="18" selection-start-line="28" selection-start-column="18" selection-end-line="28" selection-end-column="18" />
-                  <folding />
+                <state vertical-scroll-proportion="0.5537919">
+                  <caret line="28" column="31" selection-start-line="28" selection-start-column="31" selection-end-line="28" selection-end-column="31" />
+                  <folding>
+                    <element signature="e#663#687#0" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -216,6 +247,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="hsmmon" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hsmmon" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.CidrFilesViewHelper$1$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hsmmon" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -356,15 +401,28 @@
       <option name="number" value="Default" />
       <updated>1436536880857</updated>
     </task>
+    <task id="LOCAL-00001" summary="modify project_dir and include information">
+      <created>1436605997041</created>
+      <option name="number" value="00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1436605997041</updated>
+    </task>
+    <task id="LOCAL-00002" summary="add resource_table">
+      <created>1436606044951</created>
+      <option name="number" value="00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1436606044951</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="31" width="1922" height="1001" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18378094" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18378094" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3280543" sideWeight="0.49815693" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3280543" sideWeight="0.49815693" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3280543" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3280543" sideWeight="0.5018431" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32918552" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -394,18 +452,14 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <MESSAGE value="modify project_dir and include information" />
-    <option name="LAST_COMMIT_MESSAGE" value="modify project_dir and include information" />
+    <MESSAGE value="add resource_table" />
+    <option name="LAST_COMMIT_MESSAGE" value="add resource_table" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/include/db/dbmanager.h</url>
-          <line>12</line>
-        </line-breakpoint>
-      </breakpoints>
       <option name="time" value="1" />
     </breakpoint-manager>
     <watches-manager />
@@ -492,7 +546,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#344#363#0" expanded="false" />
+            <element signature="e#344#363#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -686,14 +740,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/daemon.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3325554">
-          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/include/nw/m_socket.h">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.21003501">
@@ -706,14 +752,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.36756125">
           <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/include/daemon.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.26254377">
-          <caret line="15" column="18" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
           <folding />
         </state>
       </provider>
@@ -752,14 +790,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/include/db/dbmanager.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="28" column="18" selection-start-line="28" selection-start-column="18" selection-end-line="28" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ping.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.37037036">
@@ -794,9 +824,37 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/resource.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5185185">
-          <caret line="47" column="38" selection-start-line="47" selection-start-column="38" selection-end-line="47" selection-end-column="38" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="54" column="20" selection-start-line="54" selection-start-column="20" selection-end-line="54" selection-end-column="20" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/daemon.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="26" column="8" selection-start-line="26" selection-start-column="8" selection-end-line="26" selection-end-column="8" />
+          <folding>
+            <element signature="e#344#363#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/daemon.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/db/dbmanager.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5537919">
+          <caret line="28" column="31" selection-start-line="28" selection-start-column="31" selection-end-line="28" selection-end-column="31" />
+          <folding>
+            <element signature="e#663#687#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
