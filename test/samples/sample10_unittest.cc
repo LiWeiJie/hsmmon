@@ -36,6 +36,8 @@
 
 #include "gtest/gtest.h"
 
+#include "../include/nw/m_socket.h"
+
 using ::testing::EmptyTestEventListener;
 using ::testing::InitGoogleTest;
 using ::testing::Test;
