@@ -197,17 +197,17 @@ DBManager::~DBManager()
 
 
 
-std::string DBManager::sql_to_string(int t)
+std::string m_sql_to_string(int t)
 {
     return std::to_string(t);
 }
 
-std::string DBManager::sql_to_string(long int t)
+std::string m_sql_to_string(long int t)
 {
     return std::to_string(t);
 }
 
-std::string DBManager::sql_time2string(time_t t)
+std::string m_sql_time2string(time_t t)
 {
     char buffer[256];
     struct tm *time_info;
@@ -216,7 +216,7 @@ std::string DBManager::sql_time2string(time_t t)
     return buffer;
 }
 
-time_t DBManager::sql_string2time(std::string t)
+time_t m_sql_string2time(std::string t)
 {
     struct tm time_info;
     memset(&time_info, 0, sizeof(struct tm));
@@ -224,12 +224,12 @@ time_t DBManager::sql_string2time(std::string t)
     return mktime(&time_info);
 }
 
-int DBManager::sql_sti(std::string str)
+int m_sql_sti(std::string str)
 {
     return std::stoi(str);
 }
 
-long int DBManager::sql_stli(std::string str)
+long int m_sql_stli(std::string str)
 {
     return std::stoi(str);
 }

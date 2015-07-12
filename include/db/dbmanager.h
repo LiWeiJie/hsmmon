@@ -49,13 +49,6 @@ class DBManager
         int sql_execute(std::string sql);
         m_sql_list get_sql_res();
 
-        static std::string sql_to_string(int t);
-        static std::string sql_to_string(long int t);
-        static std::string sql_time2string(time_t t);
-        static time_t sql_string2time(std::string t);
-        static int sql_sti(std::string);
-        static long int sql_stli(std::string);
-
     protected:
         
         bool check_exist(unsigned int id, std::string tn);
@@ -76,6 +69,13 @@ class DBManager
         //MYSQL_RES *mysql_res;
         bool is_connected;
         m_sql_list result_list;
-}; 
+};
+
+std::string m_sql_to_string(int t);
+std::string m_sql_to_string(long int t);
+std::string m_sql_time2string(time_t t);
+time_t m_sql_string2time(std::string t);
+int m_sql_sti(std::string);
+long int m_sql_stli(std::string);
 
 #endif

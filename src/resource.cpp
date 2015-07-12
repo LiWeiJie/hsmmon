@@ -14,7 +14,7 @@ bool resource_dao::create(resource_t &ot) {
     sprintf(sql, "INSERT INTO `%s` (`resourceName`, `resourceType`, `interval`, `frequency`, `lastUpdateTime`, `remark`, `thresholdValue`) VALUES \
             ('%s', '%d', '%d', '%d', '%s', '%s', '%s');", \
             this->table_name.c_str(), ot.resourceName.c_str(), ot.resourceType, ot.interval, ot.frequency, \
-            this->dbm->sql_time2string(ot.lastUpdateTime).c_str(), ot.remark.c_str(), ot.thresholdValue.c_str());
+            m_sql_time2string(ot.lastUpdateTime).c_str(), ot.remark.c_str(), ot.thresholdValue.c_str());
     hlog(sql);
     this->dbm->sql_execute(sql);
     return true;
@@ -25,7 +25,7 @@ bool resource_dao::update(resource_t &ot) {
     sprintf(sql, "UPDATE `%s` SET `resourceName`='%s', `resourceType`='%d', `interval`='%d', \
             `frequency`='%d', `lastUpdateTime`='%s', `remark`='%s', `thresholdValue`='%s' WHERE `resourceId`='%d';", \
             this->table_name.c_str(), ot.resourceName.c_str(), ot.resourceType, ot.interval, ot.frequency, \
-            this->dbm->sql_time2string(ot.lastUpdateTime).c_str(), ot.remark.c_str(), ot.thresholdValue.c_str(), \
+            m_sql_time2string(ot.lastUpdateTime).c_str(), ot.remark.c_str(), ot.thresholdValue.c_str(), \
             ot.resourceId);
     hlog(sql);
     this->dbm->sql_execute(sql);
@@ -76,12 +76,12 @@ std::vector<resource_t> resource_dao::find_all() {
 
 std::string resource_dao::to_string(const resource_t &ot) {
     std::string str;
-    str += this->dbm->sql_to_string(ot.resourceId) + "\t" +
+    str += m_sql_to_string(ot.resourceId) + "\t" +
            ot.resourceName + "\t" +
-           this->dbm->sql_to_string(ot.resourceType) + "\t" +
-           this->dbm->sql_to_string(ot.interval) + "\t" +
-           this->dbm->sql_to_string(ot.frequency) + "\t" +
-           this->dbm->sql_to_string(ot.lastUpdateTime) + "\t" +
+           m_sql_to_string(ot.resourceType) + "\t" +
+           m_sql_to_string(ot.interval) + "\t" +
+           m_sql_to_string(ot.frequency) + "\t" +
+                                           m_sql_to_string(ot.lastUpdateTime) + "\t" +
            ot.remark + "\t" +
            ot.thresholdValue;
     return str;
@@ -91,17 +91,17 @@ resource_t resource_dao::to_resource_t(m_sql_object sql_object) {
     m_sql_object::iterator iter = sql_object.begin();
     resource_t ot;
     assert(sql_object.size() == 8);
-    ot.resourceId = this->dbm->sql_sti(*iter);
+    ot.resourceId = m_sql_sti(*iter);
     iter++;
     ot.resourceName = *iter;
     iter++;
-    ot.resourceType = this->dbm->sql_sti(*iter);
+    ot.resourceType = m_sql_sti(*iter);
     iter++;
-    ot.interval = this->dbm->sql_sti(*iter);
+    ot.interval = m_sql_sti(*iter);
     iter++;
-    ot.frequency = this->dbm->sql_sti(*iter);
+    ot.frequency = m_sql_sti(*iter);
     iter++;
-    ot.lastUpdateTime = this->dbm->sql_string2time(*iter);
+    ot.lastUpdateTime = m_sql_string2time(*iter);
     iter++;
     ot.remark = *iter;
     iter++;

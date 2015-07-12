@@ -12,8 +12,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="679a8f5b-6cba-418e-b869-9ac1617420c7" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/deviceresource.cpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/include/db/deviceresource.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/dbmanager.cpp" afterPath="$PROJECT_DIR$/src/dbmanager.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/include/db/dbmanager.h" afterPath="$PROJECT_DIR$/include/db/dbmanager.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/device.cpp" afterPath="$PROJECT_DIR$/src/device.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ping.cpp" afterPath="$PROJECT_DIR$/src/ping.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resource.cpp" afterPath="$PROJECT_DIR$/src/resource.cpp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="hsmmon.iws" />
@@ -52,8 +55,8 @@
           <file leaf-file-name="deviceresource.cpp" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/deviceresource.cpp">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.5831904">
-                  <caret line="49" column="32" selection-start-line="49" selection-start-column="32" selection-end-line="49" selection-end-column="32" />
+                <state vertical-scroll-proportion="0.6346484">
+                  <caret line="51" column="32" selection-start-line="51" selection-start-column="32" selection-end-line="51" selection-end-column="32" />
                   <folding />
                 </state>
               </provider>
@@ -137,12 +140,55 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="device.cpp" pinned="false" current-in-tab="true">
+          <file leaf-file-name="device.cpp" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/device.cpp">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.53173244">
-                  <caret line="81" column="56" selection-start-line="81" selection-start-column="56" selection-end-line="81" selection-end-column="56" />
+                <state vertical-scroll-proportion="-6.3333335">
+                  <caret line="108" column="24" selection-start-line="108" selection-start-column="24" selection-end-line="108" selection-end-column="24" />
                   <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="resource.cpp" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/resource.cpp">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="-5.8070173">
+                  <caret line="100" column="11" selection-start-line="100" selection-start-column="11" selection-end-line="100" selection-end-column="11" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="ping.cpp" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/ping.cpp">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="-5.5438595">
+                  <caret line="121" column="11" selection-start-line="121" selection-start-column="11" selection-end-line="121" selection-end-column="11" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="dbmanager.cpp" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/dbmanager.cpp">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.0">
+                  <caret line="231" column="9" selection-start-line="231" selection-start-column="9" selection-end-line="231" selection-end-column="9" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="dbmanager.h" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/include/db/dbmanager.h">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.7941681">
+                  <caret line="79" column="0" selection-start-line="79" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
+                  <folding>
+                    <element signature="e#337#355#0" expanded="true" />
+                    <element signature="e#680#704#0" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -176,23 +222,23 @@
         <option value="$PROJECT_DIR$/src/m_socket.cpp" />
         <option value="$PROJECT_DIR$/include/daemon.h" />
         <option value="$PROJECT_DIR$/include/db/ping.h" />
-        <option value="$PROJECT_DIR$/src/ping.cpp" />
         <option value="$PROJECT_DIR$/include/db/resource.h" />
-        <option value="$PROJECT_DIR$/src/resource.cpp" />
         <option value="$PROJECT_DIR$/test/samples/sample10_unittest.cc" />
         <option value="$PROJECT_DIR$/test/make/Makefile" />
         <option value="$PROJECT_DIR$/test/sample10_unittest.cc" />
         <option value="$PROJECT_DIR$/test/main_test.cpp" />
         <option value="$PROJECT_DIR$/test/Makefile" />
-        <option value="$PROJECT_DIR$/include/db/dbmanager.h" />
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
-        <option value="$PROJECT_DIR$/src/device.cpp" />
-        <option value="$PROJECT_DIR$/src/dbmanager.cpp" />
         <option value="$PROJECT_DIR$/test/device_test.cpp" />
         <option value="$PROJECT_DIR$/CMU_PSP" />
         <option value="$PROJECT_DIR$/include/db/device.h" />
         <option value="$PROJECT_DIR$/include/db/deviceresource.h" />
         <option value="$PROJECT_DIR$/src/deviceresource.cpp" />
+        <option value="$PROJECT_DIR$/src/dbmanager.cpp" />
+        <option value="$PROJECT_DIR$/src/device.cpp" />
+        <option value="$PROJECT_DIR$/src/resource.cpp" />
+        <option value="$PROJECT_DIR$/src/ping.cpp" />
+        <option value="$PROJECT_DIR$/include/db/dbmanager.h" />
       </list>
     </option>
   </component>
@@ -440,7 +486,13 @@
       <option name="project" value="LOCAL" />
       <updated>1436691419707</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="support deviceresource">
+      <created>1436714563512</created>
+      <option name="number" value="00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1436714563512</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -449,7 +501,7 @@
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18177083" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32745314" sideWeight="0.49583334" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32745314" sideWeight="0.49583334" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32745314" sideWeight="0.49583334" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32745314" sideWeight="0.50416666" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3296582" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -506,7 +558,8 @@
     <MESSAGE value="完成令在test下面的所有unittest能够自动化测试的脚本" />
     <MESSAGE value="调整完编译选项，令主项目和单元测试能够同步" />
     <MESSAGE value="完成对device的单元测试" />
-    <option name="LAST_COMMIT_MESSAGE" value="完成对device的单元测试" />
+    <MESSAGE value="support deviceresource" />
+    <option name="LAST_COMMIT_MESSAGE" value="support deviceresource" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -596,20 +649,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ping.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.37037036">
-          <caret line="14" column="20" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/resource.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="54" column="20" selection-start-line="54" selection-start-column="20" selection-end-line="54" selection-end-column="20" />
         </state>
       </provider>
     </entry>
@@ -827,25 +866,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/include/db/dbmanager.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="44" column="19" selection-start-line="44" selection-start-column="19" selection-end-line="44" selection-end-column="19" />
-          <folding>
-            <element signature="e#337#355#0" expanded="true" />
-            <element signature="e#680#704#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/dbmanager.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="46" column="61" selection-start-line="46" selection-start-column="61" selection-end-line="46" selection-end-column="61" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/CMU_PSP">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -881,7 +901,7 @@
     <entry file="file://$PROJECT_DIR$/include/db/device.h">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="44" column="23" selection-start-line="44" selection-start-column="23" selection-end-line="44" selection-end-column="23" />
+          <caret line="41" column="19" selection-start-line="41" selection-start-column="19" selection-end-line="41" selection-end-column="19" />
           <folding>
             <element signature="e#331#348#0" expanded="true" />
           </folding>
@@ -898,19 +918,54 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/device.cpp">
+    <entry file="file://$PROJECT_DIR$/src/deviceresource.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.53173244">
-          <caret line="81" column="56" selection-start-line="81" selection-start-column="56" selection-end-line="81" selection-end-column="56" />
+        <state vertical-scroll-proportion="0.6346484">
+          <caret line="51" column="32" selection-start-line="51" selection-start-column="32" selection-end-line="51" selection-end-column="32" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/deviceresource.cpp">
+    <entry file="file://$PROJECT_DIR$/src/dbmanager.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5831904">
-          <caret line="49" column="32" selection-start-line="49" selection-start-column="32" selection-end-line="49" selection-end-column="32" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="231" column="9" selection-start-line="231" selection-start-column="9" selection-end-line="231" selection-end-column="9" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/device.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.3333335">
+          <caret line="108" column="24" selection-start-line="108" selection-start-column="24" selection-end-line="108" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resource.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.8070173">
+          <caret line="100" column="11" selection-start-line="100" selection-start-column="11" selection-end-line="100" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ping.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.5438595">
+          <caret line="121" column="11" selection-start-line="121" selection-start-column="11" selection-end-line="121" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/db/dbmanager.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7941681">
+          <caret line="79" column="0" selection-start-line="79" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
+          <folding>
+            <element signature="e#337#355#0" expanded="true" />
+            <element signature="e#680#704#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
