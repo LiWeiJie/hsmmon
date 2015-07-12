@@ -10,13 +10,16 @@
 
 #include "include/db/device.h"
 
+const std::string device_dao::table_name = "device";
+
 bool device_dao::create(device_t &ot) {
     char sql[500];
+    std::string otstr = to_string(ot);
+    if (otstr.empty()) throw "object broken";
     sprintf(sql, "INSERT INTO %s (`deviceName`, `deviceType`, `groupId`, `deviceIP`, `monitorFlag`, `lastUpdateTime`, `ipMask`) VALUES \
     ('%s', '%s', '%d', '%s', '%d', '%s', '%s');", \
             this->table_name.c_str(), ot.deviceName.c_str(), ot.deviceType.c_str(), ot.groupId, ot.deviceIP.c_str(), ot.monitorFlag,\
             this->dbm->sql_time2string(ot.lastUpdateTime).c_str(), ot.ipMask.c_str());
-    hlog(sql);
     this->dbm->sql_execute(sql);
     return true;
 }
@@ -75,15 +78,27 @@ std::vector<device_t> device_dao::find_all() {
 }
 
 std::string device_dao::to_string(const device_t &ot) {
-    std::string str;
-    str += this->dbm->sql_to_string(ot.deviceId) + "\t" +
-           ot.deviceName + "\t" +
-           ot.deviceType + "\t" +
-           this->dbm->sql_to_string(ot.groupId) + "\t" +
-           ot.deviceIP + "\t" +
-           this->dbm->sql_to_string(ot.monitorFlag) + "\t" +
-           this->dbm->sql_to_string(ot.lastUpdateTime) + "\t" +
-           ot.ipMask;
+    std::cout << ot.ipMask << std::endl;
+    hlog("0");
+    std::string str = "";
+    str += this->dbm->sql_to_string(ot.deviceId) + "\t";
+    hlog("1");
+    str += ot.deviceName + "\t";
+    hlog("2");
+    str += ot.deviceType + "\t";
+    hlog("3");
+    str += this->dbm->sql_to_string(ot.groupId) + "\t";
+    hlog("4");
+    str += ot.deviceIP + "\t";
+    hlog("5");
+    str += this->dbm->sql_to_string(ot.monitorFlag) + "\t";
+    hlog("6");
+    str += this->dbm->sql_time2string(ot.lastUpdateTime) + "\t";
+    hlog("7");
+    hlog(ot.ipMask);
+    str += ot.ipMask;
+    hlog("8");
+    hlog(str.length());
     return str;
 }
 

@@ -25,16 +25,19 @@ USER_DIR = .
 CPPFLAGS += -isystem $(GTEST_DIR)/include
 
 # Flags passed to the C++ compiler.
-CXXFLAGS += -g -Wall -Wextra -pthread
+# CXXFLAGS += -g -Wall -Wextra -pthread
+CXXFLAGS = -std=c++11 -Weverything -Wno-deprecated-declarations -Wno-disabled-macro-expansion -Wno-float-equal -Wno-c++98-compat -Wno-c++98-compat-pedantic -Wno-global-constructors -Wno-exit-time-destructors -Wno-missing-prototypes -Wno-unused-parameter -Wno-shadow -Wno-padded -Wno-old-style-cast
 
 # All tests produced by this Makefile.  Remember to add new tests you
 # created to the list.
-TESTS = sample_unittest
+TESTS = hsmmon_test
 
 # All Google Test headers.  Usually you shouldn't change this
 # definition.
 GTEST_HEADERS = $(GTEST_DIR)/include/gtest/*.h \
                 $(GTEST_DIR)/include/gtest/internal/*.h
+
+CXX = clang++
 
 # House-keeping build targets.
 
@@ -88,14 +91,14 @@ sample10_unittest.o : $(USER_DIR)/sample10_unittest.cc \
 sample10_unittest : sample10_unittest.o gtest_main.a
 	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -lpthread $^ -o $@
 
-objects := $(patsubst %.cc,%.o,$(wildcard ${USER_DIR}/*.cc))
+objects := $(patsubst %.cpp,%.o,$(wildcard ${USER_DIR}/*.cpp))
 
 hsmmon_dir = ../CMakeFiles/hsmmon.dir/src
 dependence := $(wildcard ${hsmmon_dir}/*.o)
 
-sample_unittest : $(objects) gtest.a sample1.o ${dependence}
+hsmmon_test : $(objects) gtest.a sample1.o ${dependence}
 	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -lpthread -lc++ -lc++abi -lmysqlcppconn -lmysqlclient $^ -o $@
 
-$(objects): %.o: %.cc $(GTEST_HEADERS)
-	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -c $<
+$(objects): %.o: %.cpp $(GTEST_HEADERS)
+	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -I../ -c $<
 

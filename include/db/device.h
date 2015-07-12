@@ -27,6 +27,7 @@ struct device_t
     std::string ipMask;
 };
 
+
 class device_dao
 {
     public:
@@ -47,7 +48,7 @@ class device_dao
         std::string to_string(const device_t &ot);
 
     private:
-        const std::string table_name =  "device";
+    static const std::string table_name;
         DBManager *dbm;
         device_t to_device_t(m_sql_object sql_object);
 

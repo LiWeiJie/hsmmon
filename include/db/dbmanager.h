@@ -14,7 +14,8 @@
 #include <cstring>
 #include <vector>
 #include <iostream> 
-#include <assert.h> 
+#include <assert.h>
+#include <time.h>
 
 //#include <mysql_driver.h> 
 //#include <mysql_connection.h>

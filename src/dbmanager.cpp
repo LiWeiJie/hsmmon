@@ -133,7 +133,8 @@ void DBManager::set_username(std::string userName)
 
 int DBManager::sql_execute(std::string sql)
 {
-    mes("sql execulting");
+    hlog("sql execulting:");
+    hlog(sql.c_str());
     if ( !is_connected ) {//    没有连接到服务器    
         std::cout << "Not connect to database!" << std::endl;    
         return false;    
@@ -212,7 +213,7 @@ std::string DBManager::sql_time2string(time_t t)
     char buffer[256];
     struct tm *time_info;
     time_info = localtime(&t);
-    std::strftime(buffer, 256, "%Y-%m-%d %H:%M:%S", time_info);
+    strftime(buffer, 256, "%Y-%m-%d %H:%M:%S", time_info);
     return buffer;
 }
 
