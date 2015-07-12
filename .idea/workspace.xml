@@ -12,10 +12,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="679a8f5b-6cba-418e-b869-9ac1617420c7" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/deviceresource_test.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/device_test.cpp" afterPath="$PROJECT_DIR$/test/device_test.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/deviceresource.cpp" afterPath="$PROJECT_DIR$/src/deviceresource.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/include/db/deviceresource.h" afterPath="$PROJECT_DIR$/include/db/deviceresource.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMU_PSP" afterPath="$PROJECT_DIR$/CMU_PSP" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="hsmmon.iws" />
@@ -49,11 +46,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="deviceresource.cpp" pinned="false" current-in-tab="true">
+          <file leaf-file-name="deviceresource.cpp" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/deviceresource.cpp">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.6830986">
-                  <caret line="73" column="35" selection-start-line="73" selection-start-column="35" selection-end-line="73" selection-end-column="35" />
+                <state vertical-scroll-proportion="0.0">
+                  <caret line="79" column="0" selection-start-line="79" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -99,11 +96,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="CMU_PSP" pinned="false" current-in-tab="false">
+          <file leaf-file-name="CMU_PSP" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/CMU_PSP">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0">
-                  <caret line="10" column="8" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
+                <state vertical-scroll-proportion="0.52816904">
+                  <caret line="20" column="22" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
                   <folding />
                 </state>
               </provider>
@@ -234,7 +231,6 @@
         <option value="$PROJECT_DIR$/test/main_test.cpp" />
         <option value="$PROJECT_DIR$/test/Makefile" />
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
-        <option value="$PROJECT_DIR$/CMU_PSP" />
         <option value="$PROJECT_DIR$/include/db/device.h" />
         <option value="$PROJECT_DIR$/src/dbmanager.cpp" />
         <option value="$PROJECT_DIR$/src/device.cpp" />
@@ -245,6 +241,7 @@
         <option value="$PROJECT_DIR$/include/db/deviceresource.h" />
         <option value="$PROJECT_DIR$/test/deviceresource_test.cpp" />
         <option value="$PROJECT_DIR$/src/deviceresource.cpp" />
+        <option value="$PROJECT_DIR$/CMU_PSP" />
       </list>
     </option>
   </component>
@@ -504,7 +501,13 @@
       <option name="project" value="LOCAL" />
       <updated>1436714909665</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="finish the unittest for deviceresource">
+      <created>1436715996678</created>
+      <option name="number" value="00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1436715996678</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -572,7 +575,8 @@
     <MESSAGE value="完成对device的单元测试" />
     <MESSAGE value="support deviceresource" />
     <MESSAGE value="rename the other struct to string function in dbmanager" />
-    <option name="LAST_COMMIT_MESSAGE" value="rename the other struct to string function in dbmanager" />
+    <MESSAGE value="finish the unittest for deviceresource" />
+    <option name="LAST_COMMIT_MESSAGE" value="finish the unittest for deviceresource" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -857,14 +861,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CMU_PSP">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="10" column="8" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/daemon.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -974,8 +970,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/deviceresource.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6830986">
-          <caret line="73" column="35" selection-start-line="73" selection-start-column="35" selection-end-line="73" selection-end-column="35" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="79" column="0" selection-start-line="79" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMU_PSP">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.52816904">
+          <caret line="20" column="22" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
           <folding />
         </state>
       </provider>
