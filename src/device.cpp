@@ -45,7 +45,7 @@ bool device_dao::erase(unsigned int id) {
 
 bool device_dao::find_by_id(unsigned int id, device_t &ot) {
     char sql[500];
-    sprintf(sql, "SELECT * FROM %s WHERE `pingId`='%d';", this->table_name.c_str(), id);
+    sprintf(sql, "SELECT * FROM %s WHERE `deviceId`='%d';", this->table_name.c_str(), id);
     hlog(sql);
     this->dbm->sql_execute(sql);
     m_sql_list sql_list = this->dbm->get_sql_res();
@@ -78,27 +78,15 @@ std::vector<device_t> device_dao::find_all() {
 }
 
 std::string device_dao::to_string(const device_t &ot) {
-    std::cout << ot.ipMask << std::endl;
-    hlog("0");
     std::string str = "";
     str += this->dbm->sql_to_string(ot.deviceId) + "\t";
-    hlog("1");
     str += ot.deviceName + "\t";
-    hlog("2");
     str += ot.deviceType + "\t";
-    hlog("3");
     str += this->dbm->sql_to_string(ot.groupId) + "\t";
-    hlog("4");
     str += ot.deviceIP + "\t";
-    hlog("5");
     str += this->dbm->sql_to_string(ot.monitorFlag) + "\t";
-    hlog("6");
     str += this->dbm->sql_time2string(ot.lastUpdateTime) + "\t";
-    hlog("7");
-    hlog(ot.ipMask);
     str += ot.ipMask;
-    hlog("8");
-    hlog(str.length());
     return str;
 }
 

@@ -4,8 +4,12 @@ PROJECT(hsmmon)
 aux_source_directory(. SRC_LIST)
 aux_source_directory(src SRC_LIST)
 SET(HSMMON_DIR /home/leewithx/Project/hsmmon)
+
+SET(GTEST_DIR /home/leewithx/opt/gtest)
+SET(GTEST_FLAG -I${GTEST_DIR}/include/gtest -I${GTEST_DIR}/include/gtest/internal)
+
 SET(CMAKE_CXX_COMPILER "clang++")
-SET(CMAKE_CXX_FLAGS "-I${HSMMON_DIR} -std=c++11 -Werror -Weverything -Wno-deprecated-declarations -Wno-disabled-macro-expansion -Wno-float-equal -Wno-c++98-compat -Wno-c++98-compat-pedantic -Wno-global-constructors -Wno-exit-time-destructors -Wno-missing-prototypes -Wno-unused-parameter -Wno-shadow -Wno-padded -Wno-old-style-cast")
+SET(CMAKE_CXX_FLAGS "-I${HSMMON_DIR}  -std=c++11 -Werror -Weverything -Wno-deprecated-declarations -Wno-disabled-macro-expansion -Wno-float-equal -Wno-c++98-compat -Wno-c++98-compat-pedantic -Wno-global-constructors -Wno-exit-time-destructors -Wno-missing-prototypes -Wno-unused-parameter -Wno-shadow -Wno-padded -Wno-old-style-cast")
 SET(CMAKE_EXE_LINKER_FLAGS "-lc++ -lc++abi -lmysqlcppconn -lmysqlclient ")
 SET(CMAKE_BUILD_TYPE Debug) 
 ADD_EXECUTABLE(hsmmon ${SRC_LIST} )

@@ -45,7 +45,6 @@ void DBManager::init_connect()
     mysql_init(&this->mysql_con);
     if (mysql_real_connect(&this->mysql_con, this->HOSTS, this->USERNAME, \
         this->PASSWORD, this->DBNAME, this->PORT, NULL, 0)) {
-        mes("Connected");
         is_connected = true;
     } else {
         std::cout << "Error connection to database"  << std::endl;    
