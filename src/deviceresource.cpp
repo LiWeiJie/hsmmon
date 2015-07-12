@@ -63,17 +63,17 @@ std::vector<deviceresource_t> deviceresource_dao::find_all() {
 
 std::string deviceresource_dao::to_string(const deviceresource_t &ot) {
     std::string str = "";
-    str += this->dbm->sql_to_string(ot.deviceId) + "\t";
-    str += this->dbm->sql_to_string(ot.resourceId);
+    str += m_sql_to_string(ot.deviceId) + "\t";
+    str += m_sql_to_string(ot.resourceId);
     return str;
 }
 
 deviceresource_t deviceresource_dao::to_deviceresource_t(m_sql_object sql_object) {
     m_sql_object::iterator iter = sql_object.begin();
-    device_t ot;
+    deviceresource_t ot;
     assert(sql_object.size() == 2);
-    ot.deviceId = this->dbm->sql_sti(*iter);
+    ot.deviceId = m_sql_sti(*iter);
     iter++;
-    ot.resource = this->dbm->sql_sti(*iter);
+    ot.resourceId = m_sql_sti(*iter);
     return ot;
 }

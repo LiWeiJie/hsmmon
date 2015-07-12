@@ -7,8 +7,7 @@
 *
 * @History: 
 **************************************************************/
-#include <bits/stl_bvector.h>
-#include <bits/stringfwd.h>
+#include "include/db/dbmanager.h"
 
 #ifndef HSMMON_DEVICERESOURCE_H
 #define HSMMON_DEVICERESOURCE_H

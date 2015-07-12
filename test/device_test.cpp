@@ -29,7 +29,7 @@ device_t construct_device_t(std::string device_name, std::string device_type, in
 }
 
 
-TEST(device_dao, crud) {
+TEST(device, crud) {
     DBManager dbm;
     device_dao ddao;
     device_t dt;
@@ -41,7 +41,7 @@ TEST(device_dao, crud) {
     EXPECT_EQ(0, dt.groupId);
     EXPECT_STREQ("1.1.1.1", dt.deviceIP.c_str());
     EXPECT_EQ(0, dt.monitorFlag);
-    EXPECT_STREQ("2015-05-22 21:23:56", dbm.sql_time2string(dt.lastUpdateTime).c_str());
+    EXPECT_STREQ("2015-05-22 21:23:56", m_sql_time2string(dt.lastUpdateTime).c_str());
     EXPECT_STREQ("255.255.255.0", dt.ipMask.c_str());
 
     //find_all
