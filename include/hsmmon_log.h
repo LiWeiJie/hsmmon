@@ -36,4 +36,12 @@ void hfelog(X para) {
     ofs << "<Fatal Error>:\t" << para << std::endl;
 }
 
+#define ERR_EXIT(m) \
+do\
+{\
+    hfelog(m);\
+    exit(EXIT_FAILURE);\
+}\
+while (0);\
+
 #endif
