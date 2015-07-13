@@ -34,7 +34,6 @@ TEST(device, crud) {
     device_dao ddao;
     device_t dt;
     ddao.find_by_id(1, dt);
-    std::cout << ddao.to_string(dt) << std::endl;
     EXPECT_EQ(1, dt.deviceId);
     EXPECT_STREQ("gtest", dt.deviceName.c_str());
     EXPECT_STREQ("gtest", dt.deviceType.c_str());

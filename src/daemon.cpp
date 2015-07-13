@@ -10,6 +10,14 @@
 
 #include "include/daemon.h"
 
+std::map<int, device_t> probes;
+std::map<int, resource_t> resources;
+std::vector<deviceresource_t> dr_map;
+
+std::map<int, int> device_pid;
+std::map<int, std::set<int> > device_resource;
+std::map<int, int> resource_device;
+
 
 void let_it_fly() {
     if (daemon(1, 1) == -1)
@@ -57,3 +65,6 @@ void update_job() {
 }
 
 
+void monitor_handle() {
+
+}
