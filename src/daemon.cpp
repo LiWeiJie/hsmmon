@@ -16,6 +16,22 @@ void let_it_fly() {
         ERR_EXIT("daemon error");
     update_job();
 
+    int target_device = 0;
+    int fork_status;
+    for (auto device:device_resource) {
+        if (device.second.size() > 0) {
+            fork_status = fork();
+            if (fork_status == -1) {
+                ERR_EXIT("fork error");
+            } else if (fork_status > 0) {
+                device_pid[device.first] = fork_status;
+            } else {
+                target_device = device.first;
+                break;
+            }
+        }
+    }
+
 }
 
 void update_job() {
