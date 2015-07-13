@@ -135,11 +135,11 @@ int DBManager::sql_execute(std::string sql)
     hlog("sql execulting:");
     hlog(sql.c_str());
     if ( !is_connected ) {//    没有连接到服务器    
-        std::cout << "Not connect to database!" << std::endl;    
+        helog("Not connect to database!");
         return false;    
     }    
     if ( sql.empty()) {//    SQL语句为空    
-        std::cout << "SQL is null!" << std::endl;    
+        helog("SQL is null!");
         return false;    
     }    
    
@@ -149,7 +149,6 @@ int DBManager::sql_execute(std::string sql)
     unsigned int j;
 
     if( !mysql_query(&mysql_con, sql.c_str())) {
-        mes("sql success");
         res = mysql_store_result(&mysql_con);    
         this -> result_list.clear();
         if (res == NULL) return 0;
@@ -164,14 +163,13 @@ int DBManager::sql_execute(std::string sql)
                 } else {
                     //printf("NULL\n");
                     objectValue.push_back("");
-                } 
-            }    
-            this -> result_list.push_back(objectValue);    
-        }            
-        mes("result stored");
+                }
+            }
+            this->result_list.push_back(objectValue);
+        }
         mysql_free_result(res);         //free result after you get the result    
-    } else 
-        mes("sql failed");
+    } else
+        ERR_EXIT("sql failed");
     return 0;    
 }
 

@@ -23,19 +23,21 @@
 #include <map>
 #include <set>
 
-std::map<int, device_t> probes;
-std::map<int, resource_t> resources;
-std::vector<deviceresource_t> dr_map;
+extern std::map<int, device_t> probes;
+extern std::map<int, resource_t> resources;
+extern std::vector<deviceresource_t> dr_map;
 
-std::map<int, int> device_pid;
-std::map<int, std::set<int> > device_resource;
-std::map<int, int> resource_device;
+extern std::map<int, int> device_pid;
+extern std::map<int, std::set<int> > device_resource;
+extern std::map<int, int> resource_device;
 
 
 // main process
 void let_it_fly();
 
 void update_job();
+
+void monitor_handle();
 
 #endif //HSMMON_DAEMON_H
 
