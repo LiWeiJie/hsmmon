@@ -18,6 +18,10 @@
 #include "include/db/deviceresource.h"
 #include "include/db/device.h"
 #include "include/db/resource.h"
+#include "include/db/ping.h"
+
+#include "include/nw/protocol.h"
+#include <include/nw/m_socket.h>
 
 #include <vector>
 #include <map>
@@ -27,7 +31,8 @@ extern std::map<int, device_t> probes;
 extern std::map<int, resource_t> resources;
 extern std::vector<deviceresource_t> dr_map;
 
-extern std::map<int, int> device_pid;
+//extern std::map<int, int> device_pid;
+extern std::map<int, int> resource_pid;
 extern std::map<int, std::set<int> > device_resource;
 extern std::map<int, int> resource_device;
 

@@ -24,8 +24,8 @@ struct req_ping
 struct res_ping
 {
     int id;
-    int rece, loss;
-    double mint, avgt, maxt;
+    int send, rece, loss;
+    int mint, avgt, maxt;
     char err_msg[100];
     time_t exect;
 };
