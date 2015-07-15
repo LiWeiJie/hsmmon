@@ -13,6 +13,7 @@
 #include <iostream>
 
 #include "include/db/deviceresource.h"
+#include "include/hsmmon_log.h"
 
 TEST(deviceresource, find_by_deviceId) {
     deviceresource_dao drao;

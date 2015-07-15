@@ -81,6 +81,7 @@ void monitor_handle(int resourceId) {
             send_ping.id = resourceId;
             send_ping.t = 1;
             std::strcpy(send_ping.ip, device.deviceIP.c_str());
+
             //TODO whereis the port?!
             std::strcpy(send_ping.port, "1111");
 
